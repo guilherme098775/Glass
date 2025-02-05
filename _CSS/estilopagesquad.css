@@ -83,7 +83,7 @@ h2 {
     border: 2px solid black;
     border-radius: 5px;
     transition: transform 0.3s;
-    width: 260px;
+    width: 212px;
 }
 
 .image-container img:hover {
