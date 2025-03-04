@@ -1,28 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="_CSS/estilo3.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="_CSS/contato.css">
+    <title>Glassminium - Esquadrias de Aluminios</title>
 </head>
 <body>
-    <label for="nome">nome:</label>
-    <input type="nome" id="nome" name="nome" required><br><br>
-
-
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required><br><br>
-
-    <label for="telefone">Telefone:</label>
-    <input type="text" id="telefone" name="telefone" required><br><br>
-
-    <label for="mensagem">Mensagem:</label><br>
-    <textarea id="mensagem" name="mensagem" rows="4" required></textarea><br><br>
-
-    <input type="submit" value="Enviar">
-</form>
+    
+    <div class="form_db">
+        <h1>Contate-nos</h1>
+        <form method="post">
+            <div><input type="nome" name="nome" placeholder="nome"></div>
+            <div><input type="email" name="email" placeholder="email"></div>
+            <div><input type="telefone" name="telefone" placeholder="telefone"></div>
+            <div><input type="mensagem" name="mensagem" placeholder="mensagem"></div>
+            <div><input type="submit" name="acao" value="Enviar"></div>
+            <div><input type="hidden" name="form" value="f_form"></div>
+        </form>
+    </div><!--form_db-->
 
 </body>
 </html>
-
