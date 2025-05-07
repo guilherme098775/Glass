@@ -4,20 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="_CSS/contato.css">
+    <link rel="stylesheet" href="_CSS/estilo.css">
     <title>Glassminium - Esquadrias de Aluminios</title>
 </head>
 <body>
-    
-    <div class="form_db">
-        <h1>CONTATE-NOS</h1>
-        <form method="post">
-            <div><input type="nome" name="nome" placeholder="nome"></div>
-            <div><input type="email" name="email" placeholder="email"></div>
-            <div><input type="telefone" name="telefone" placeholder="telefone"></div>
-            <div><textarea name="Descricao" id="mensagem" placeholder="Mensagem"></textarea></div>
-            <div><input type="submit" name="acao" value="Enviar"></div>
-            <div><input type="hidden" name="form" value="f_form"></div>
-        </form>
-    </div><!--form_db-->
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="logo"><img src="molde/Logo/PNG/Logo Glassminium - PNG -_Horizontal Oficial 01.png" alt=""></a>
+        <button class="hamburguer" id="hamburguer">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+        <ul class="navmenu" id="navmenu">
+            <li><a href="#" class="servico">Serviços</a>
+                    <ul class="submenu">
+                        <li><a href="pagesquadrias.html">Esquadrias em Aluminios</a></li>
+                        <li><a href="pagcobertura.html">Coberturas</a></li>
+                        <li><a href="pagfachadas.html">Fachadas em Vidro</a></li>
+                        <li><a href="pagmuros.html">Muros</a></li>
+                        <li><a href="pagportoes.html">Portões</a></li>
+                    </ul>
+                    </li>
+                    <li class="sobre"><a href="pagsobre.html">Sobre nós</a></li>
+                    <li class="contato"><a href="pagcontato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <form action="pag.php" method="post">
+                <input type="text" name="nome" id="inome" placeholder="Nome Completo">
+                <input type="email" name="email" id="iemail" placeholder="E-mail">
+                <input type="tel" name="tel" id="itel" placeholder="Telefone">
+                <textarea name="descricao" id="idescricao" placeholder="Deixe aqui seu comentário"></textarea>
+                <input type="submit" value="Enviar">
+            </form>
+        </main>
 </body>
 </html>
