@@ -13,6 +13,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .logo {
@@ -85,6 +86,62 @@ nav ul li ul li a:hover {
     color: #ffffff; /* Branco ao passar o mouse */
     background-color: #007BFF; /* Azul metálico */
     margin: 10px 15px; /* Aumenta o padding ao passar o mouse */
-     transition: color 0.3s ease, background-color 0.3s ease;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
 
+/* Botão hamburguer - escondido em desktop */
+.menu-hamburguer {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+.menu-hamburguer span {
+  height: 4px;
+  width: 100%;
+  background: #222;
+  margin: 5px 0;
+  border-radius: 2px;
+  display: block;
+  transition: 0.3s;
+}
+
+/* Menu responsivo */
+@media (max-width: 900px) {
+  .menu-hamburguer {
+    display: flex;
+    position: absolute;
+    right: 20px;
+    top: 30px;
+  }
+  #nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 220px;
+    height: 100vh;
+    background: #fff;
+    box-shadow: -2px 0 8px rgba(0,0,0,0.1);
+    transition: right 0.3s;
+    z-index: 1000;
+    padding-top: 80px;
+  }
+  #nav-menu.ativo {
+    right: 0;
+  }
+  #nav-menu ul {
+    flex-direction: column;
+    gap: 0;
+  }
+  #nav-menu ul li {
+    margin: 20px 0;
+  }
+  .header-container {
+    position: relative;
+  }
 }

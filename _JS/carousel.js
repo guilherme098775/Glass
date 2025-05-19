@@ -400,3 +400,7 @@ document.querySelectorAll('.galeria-slide').forEach((slide, idx) => {
         showOverlay(current);
     });
 });
+
+document.getElementById('menu-hamburguer').onclick = function() {
+    document.getElementById('nav-menu').classList.toggle('ativo');
+};
