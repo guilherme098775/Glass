@@ -15,7 +15,7 @@
 .carousel {
     position: relative;
     width: 100%;
-    max-height: 350px;
+    max-height: 1200px;
     overflow: hidden;
 }
 
@@ -241,6 +241,8 @@
     grid-template-columns: repeat(4, 1fr); /* 4 colunas fixas */
     gap: 24px;
     margin-top: 24px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .servico-btn {
