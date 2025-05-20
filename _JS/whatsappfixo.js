@@ -1,0 +1,1 @@
+// Exemplo: animação ou interação extra no botão fixo do WhatsApp

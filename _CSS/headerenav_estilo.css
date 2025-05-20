@@ -145,3 +145,79 @@ nav ul li ul li a:hover {
     position: relative;
   }
 }
+
+/* Submenu padrão */
+#nav-menu ul ul {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    min-width: 180px;
+    background: #fff;
+    box-shadow: 2px 2px 8px #0002;
+    z-index: 1002;
+}
+
+/* Mostra submenu ao passar o mouse no desktop */
+#nav-menu ul li:hover > ul {
+    display: block;
+}
+
+/* RESPONSIVO: submenu abre para a direita no menu hamburguer */
+@media (max-width: 900px) {
+    #nav-menu ul {
+        position: static;
+    }
+    #nav-menu ul ul {
+        position: absolute;
+        right: 15%;   /* Abre para a esquerda */
+        left: auto;
+        top: 20px;
+        display: none;
+        background: #fff;
+        box-shadow: 2px 2px 8px #0002;
+        min-width: 180px;
+        z-index: 1002;
+    }
+    #nav-menu ul li {
+        position: relative;
+    }
+    #nav-menu ul li:focus-within > ul,
+    #nav-menu ul li:active > ul,
+    #nav-menu ul li.open > ul {
+        display: block;
+    }
+    /* Para facilitar o toque, pode adicionar seta ou indicador */
+    #nav-menu ul li > span::after {
+
+        font-size: 1em;
+        color: #174fa3;
+        margin-left: 6px;
+    }
+    #nav-menu ul li > span::after {
+        display: none !important;
+        content: none !important;
+    }
+    span {
+      margin-left: 10px;
+    }
+}
+
+/* Submenu padrão para telas maiores: abre abaixo da opção Serviços */
+@media (min-width: 901px) {
+  #nav-menu ul ul {
+    position: absolute;
+    top: 100%;   /* Abre abaixo do item pai */
+    left: 0;
+    right: auto;
+    min-width: 180px;
+    background: #fff;
+    box-shadow: 2px 2px 8px #0002;
+    z-index: 1002;
+    display: none;
+  }
+  #nav-menu ul li:hover > ul,
+  #nav-menu ul li:focus-within > ul {
+    display: block;
+  }
+}
